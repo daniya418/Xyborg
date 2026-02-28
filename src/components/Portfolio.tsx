@@ -25,8 +25,35 @@ export default function Portfolio() {
     : portfolioItems.filter(item => item.category === selectedCategory);
 
   return (
-    <section id="portfolio" className="py-24 px-4 bg-black">
-      <div className="max-w-7xl mx-auto">
+    <section id="portfolio" className="relative min-h-screen flex items-center justify-center py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-black overflow-hidden">
+      {/* Animated blurred backgrounds */}
+      <motion.div
+        className="absolute top-32 right-1/4 h-[380px] w-[380px] rounded-full bg-[radial-gradient(circle_at_center,rgba(193,23,23,0.18),rgba(193,23,23,0)_70%)] blur-3xl"
+        animate={{
+          x: [0, 40, 0],
+          y: [0, -30, 0],
+          scale: [1, 1.15, 1],
+        }}
+        transition={{
+          duration: 11,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="absolute bottom-32 left-1/4 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle_at_center,rgba(229,229,229,0.06),rgba(229,229,229,0)_70%)] blur-3xl"
+        animate={{
+          x: [0, -50, 0],
+          y: [0, 30, 0],
+          scale: [1, 1.2, 1],
+        }}
+        transition={{
+          duration: 13,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <div className="relative w-full max-w-7xl mx-auto">
         <motion.div
           ref={ref}
           initial={{ opacity: 0 }}

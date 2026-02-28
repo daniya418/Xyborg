@@ -11,7 +11,7 @@ export default function Footer() {
           transition={{ duration: 0.8 }}
           className="text-gray-500 text-sm"
         >
-          © {new Date().getFullYear()} Sound of Heart. All rights reserved.
+          © {new Date().getFullYear()} Xyborg. All rights reserved.
         </motion.p>
       </div>
     </footer>

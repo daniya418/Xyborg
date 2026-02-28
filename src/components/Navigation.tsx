@@ -56,7 +56,7 @@ export default function Navigation() {
           whileTap={{ scale: 0.95 }}
           className="text-2xl font-display font-semibold tracking-wide text-muted-white hover:text-blood-red transition-colors"
         >
-          Sound of <span className="text-blood-red">Heart</span>
+          xyborg
         </motion.button>
 
         {/* Desktop Navigation */}

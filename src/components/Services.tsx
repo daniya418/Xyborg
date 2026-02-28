@@ -8,8 +8,35 @@ export default function Services() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="services" className="py-24 px-4 bg-[#0c0c12]">
-      <div className="max-w-6xl mx-auto">
+    <section id="services" className="relative min-h-screen flex items-center justify-center py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-[#0c0c12] overflow-hidden">
+      {/* Animated blurred backgrounds */}
+      <motion.div
+        className="absolute -top-10 -right-20 h-[450px] w-[450px] rounded-full bg-[radial-gradient(circle_at_center,rgba(193,23,23,0.2),rgba(193,23,23,0)_70%)] blur-3xl"
+        animate={{
+          x: [0, -60, 0],
+          y: [0, 40, 0],
+          scale: [1, 1.2, 1],
+        }}
+        transition={{
+          duration: 12,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="absolute top-1/2 -left-20 h-[300px] w-[300px] rounded-full bg-[radial-gradient(circle_at_center,rgba(139,0,0,0.15),rgba(139,0,0,0)_70%)] blur-3xl"
+        animate={{
+          x: [0, 30, 0],
+          y: [0, -20, 0],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{
+          duration: 9,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <div className="relative w-full max-w-6xl mx-auto">
         <motion.h2
           ref={ref}
           initial={{ opacity: 0, y: 30 }}

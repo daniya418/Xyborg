@@ -53,7 +53,6 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-6xl md:text-8xl lg:text-9xl font-display font-semibold mb-6 tracking-tight leading-[0.9]"
         >
-          <span className="block text-muted-white">Sound of</span>
           <motion.span
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -61,7 +60,7 @@ export default function Hero() {
             className="block text-blood-red glow-red-strong"
             style={{ textShadow: '0 0 40px rgba(139, 0, 0, 0.5)' }}
           >
-            Heart
+            XYBORG
           </motion.span>
         </motion.h1>
 
@@ -71,7 +70,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="text-xl md:text-2xl text-gray-400 mb-12 font-light tracking-wide"
         >
-          Where sound meets soul
+          Engineering the future of sound
         </motion.p>
 
         <motion.div

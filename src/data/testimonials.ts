@@ -6,7 +6,7 @@ export const testimonials: Testimonial[] = [
     name: 'Sarah Chen',
     role: 'Director',
     company: 'Independent Films',
-    text: 'Working with Sound of Heart transformed our film. The music didn\'t just accompany the visuals—it became part of the story itself.',
+    text: 'Working with Xyborg transformed our film. The music didn\'t just accompany the visuals—it became part of the story itself.',
   },
   {
     id: '2',

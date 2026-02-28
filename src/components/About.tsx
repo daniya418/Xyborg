@@ -7,8 +7,35 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="about" className="py-24 px-4 section-sheen">
-      <div className="max-w-4xl mx-auto">
+    <section id="about" className="relative min-h-screen flex items-center justify-center py-16 md:py-24 px-4 sm:px-6 lg:px-8 section-sheen overflow-hidden">
+      {/* Animated blurred backgrounds */}
+      <motion.div
+        className="absolute top-20 left-10 h-[400px] w-[400px] rounded-full bg-[radial-gradient(circle_at_center,rgba(193,23,23,0.25),rgba(193,23,23,0)_70%)] blur-3xl"
+        animate={{
+          x: [0, 50, 0],
+          y: [0, 30, 0],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="absolute bottom-20 right-10 h-[350px] w-[350px] rounded-full bg-[radial-gradient(circle_at_center,rgba(229,229,229,0.08),rgba(229,229,229,0)_70%)] blur-3xl"
+        animate={{
+          x: [0, -40, 0],
+          y: [0, -50, 0],
+          scale: [1, 1.15, 1],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <div className="relative w-full max-w-4xl mx-auto">
         <motion.div
           ref={ref}
           initial={{ opacity: 0 }}
@@ -30,7 +57,7 @@ export default function About() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              Sound of Heart was born from a simple belief: <span className="text-blood-red">sound is emotion made audible</span>. Every project we touch is infused with passion, precision, and an unwavering commitment to quality.
+              Xyborg was born from a simple belief: <span className="text-blood-red">sound is emotion made audible</span>. Every project we touch is infused with passion, precision, and an unwavering commitment to quality.
             </motion.p>
 
             <motion.p

@@ -41,8 +41,35 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-4 section-sheen">
-      <div className="max-w-4xl mx-auto">
+    <section id="contact" className="relative min-h-screen flex items-center justify-center py-16 md:py-24 px-4 sm:px-6 lg:px-8 section-sheen overflow-hidden">
+      {/* Animated blurred backgrounds */}
+      <motion.div
+        className="absolute -top-20 right-1/3 h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_at_center,rgba(193,23,23,0.22),rgba(193,23,23,0)_70%)] blur-3xl"
+        animate={{
+          x: [0, -30, 0],
+          y: [0, 50, 0],
+          scale: [1, 1.25, 1],
+        }}
+        transition={{
+          duration: 14,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="absolute bottom-10 left-20 h-[350px] w-[350px] rounded-full bg-[radial-gradient(circle_at_center,rgba(139,0,0,0.12),rgba(139,0,0,0)_70%)] blur-3xl"
+        animate={{
+          x: [0, 40, 0],
+          y: [0, -40, 0],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <div className="relative w-full max-w-4xl mx-auto">
         <motion.div
           ref={ref}
           initial={{ opacity: 0 }}

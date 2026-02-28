@@ -1,6 +1,6 @@
-# Sound of Heart - Professional Audio Studio Portfolio
+# Xyborg - Professional Audio Studio Portfolio
 
-A high-end, cinematic portfolio website for Sound of Heart music studio.
+A high-end, cinematic portfolio website for Xyborg music studio.
 
 ## 🚀 Getting Started
 
